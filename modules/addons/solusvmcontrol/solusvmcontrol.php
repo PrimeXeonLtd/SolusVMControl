@@ -495,13 +495,13 @@ function solusvmcontrol_output($vars)
 
     // Tabbed output area
     echo "  <div style=\"display:inline-block;text-align:center\">
-                <a href=\"https://www.primexeon.com/clients/submitticket.php?step=2&deptid=2\"><img src=\"http://www.primexeon.com/addons/SVMC/images/support.png\" width=\"100\" height=\"100\" alt=\"Support\"/></a><br />
-                <span><a href=\"https://www.primexeon.com/clients/submitticket.php?step=2&deptid=2\">Support</a></span>
+                <a href=\"https://github.com/PrimeXeonLtd/SolusVMControl/issues\"><img src=\"http://www.primexeon.com/addons/SVMC/images/support.png\" width=\"100\" height=\"100\" alt=\"Support\"/></a><br />
+                <span><a href=\"https://github.com/PrimeXeonLtd/SolusVMControl/issues\">Support</a></span>
             </div>
 
             <div style=\"display:inline-block;text-align:center\">
-                <a href=\"http://www.primexeon.com/clients/knowledgebase/104/FAQ.html\"><img src=\"http://www.primexeon.com/addons/SVMC/images/faq.png\" width=\"100\" height=\"100\" alt=\"FAQ\"/></a><br />
-                <span><a href=\"http://www.primexeon.com/clients/knowledgebase/104/FAQ.html\">FAQ's</a></span>
+                <a href=\"https://github.com/PrimeXeonLtd/SolusVMControl\"><img src=\"http://www.primexeon.com/addons/SVMC/images/faq.png\" width=\"100\" height=\"100\" alt=\"FAQ\"/></a><br />
+                <span><a href=\"https://github.com/PrimeXeonLtd/SolusVMControl\">FAQ's</a></span>
             </div>
 
             <div style=\"clear:left\"></div>
