@@ -4,6 +4,69 @@ SolusVMControl is an addon for WHMCS which is designed to allow VPS resellers wh
 ## Note
 Please note that this release is currently untested.
 
+## Install
+
+All files should be chmod 644.
+
+Once you have uploaded all of the files, go to the Addon Modules menu 
+option under Setup on the WHMCS menu. You will see SolusVM Control on
+listed. Click Activate to the right hand side to activate it.
+
+Once activated, you will see a new section on the Addon Modules page.
+Under the "SolusVM Control" section, enter your license key and select
+which user groups should have access. Once you have done this, click
+Save Changes at the bottom of the page.
+
+SolusVM Control should now appear in the top menu under Addons and be
+fully functional.
+
+To allow SolusVM Control to appear in the client area, you will need
+to make a small change to the clientareaproductdetails.tpl file, you 
+should add the following code: 
+
+``` HTML
+{if $SVMC.enabled}
+<p><h4>Server Actions:</h4></p>
+<table>
+	{$SVMC.js}
+	<tr> 
+		<td class="fieldarea">{$SVMC.serveractions}:</td> 
+		<td>{$SVMC.buttonstatus} {$SVMC.buttonboot} {$SVMC.buttonshutdown} {$SVMC.buttonreboot}</td> 
+	</tr> 
+    
+	<tr> 
+		<td class="fieldarea">{$SVMC.serverstatus}:</td> 
+		<td id="serverstatus"></td> 
+	</tr>
+</table>
+{/if}
+```
+
+just below the line that looks like the following
+
+``` HTML
+{if $moduleclientarea}<div class="moduleoutput">{$moduleclientarea|replace:'modulebutton':'btn'}</div>{/if}
+```
+
+Please note that if you have a completely custom template, you can
+simply make use of the smarty variables which are detailed below
+
+{$SVMC.enabled} // Will have a value of true if SVMC is enabled for the given VPS.
+
+{$SVMC.js} // Returns the generated JavaScript required for the jQuery AJAX requests
+
+{$SVMC.serveractions}	// The server actions label
+
+{$SVMC.serverstatus}	// The server status label
+
+{$SVMC.buttonstatus} // The status button
+{$SVMC.buttonboot} // The boot button
+{$SVMC.buttonshutdown} // The shutdown button
+{$SVMC.buttonreboot}	// The reboot button
+
+You must also have an html entity with the id "serverstatus" (this is
+where the jQuery AJAX response will be displayed).
+
 ## FAQ
 
 
